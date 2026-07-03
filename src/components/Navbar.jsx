@@ -31,7 +31,7 @@ const Navbar = () => {
           <nav className="hidden lg:block">
             <ul className="flex items-center gap-8">
               <li>
-                <button className="flex items-center gap-1 text-sm font-medium text-[#3458C4]">
+                <button className="relative flex items-center gap-1 pb-1 text-sm font-medium text-[#3458C4] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#3458C4] after:content-['']">
                   Showcase
                   <FiChevronDown className="mt-0.5" />
                 </button>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 <li key={link}>
                   <a
                     href="#"
-                    className="text-sm font-medium text-[#374151] hover:text-blue-600"
+                    className="relative pb-1 text-sm font-medium text-[#374151] transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-blue-600 after:transition-all after:duration-200 hover:text-blue-600 hover:after:w-full"
                   >
                     {link}
                   </a>
@@ -52,7 +52,7 @@ const Navbar = () => {
 
         {/* Right: desktop actions */}
         <div className="hidden items-center gap-6 lg:flex">
-          <button className="cursor-pointer text-sm font-medium text-gray-700 hover:text-black">
+          <button className="cursor-pointer text-sm font-medium text-gray-700 transition-colors duration-200 hover:text-black">
             Login
           </button>
           <Button>Get a demo</Button>

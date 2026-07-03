@@ -16,7 +16,7 @@ const FAQ = () => {
     <section className="w-full">
       {/* Same outer max-width + padding as every other section, so this
           block's left/right edges line up with the product grids above it. */}
-      <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-8 lg:px-[84px] lg:py-14">
+      <div className="container-page section-py">
         <SectionTitle
           title="Frequently Asked Questions"
           subtitle="Everything you need to know about the product and billing."

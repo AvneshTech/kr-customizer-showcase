@@ -3,7 +3,7 @@
 
 const Button = ({ children, variant = "primary", className = "", ...props }) => {
   const base =
-    "inline-flex min-w-fit items-center justify-center whitespace-nowrap font-medium transition-colors cursor-pointer";
+    "inline-flex min-w-fit items-center justify-center whitespace-nowrap font-medium transition-all duration-200 ease-in-out cursor-pointer active:scale-[0.98]";
 
   const variants = {
     primary:

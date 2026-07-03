@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const FeatureCard = ({ name, image }) => {
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md">
+    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
       {/* Product image — light gray zone, image always centered on both
           axes regardless of the source photo's own aspect ratio. */}
       <div className="flex h-[250px] w-full items-center justify-center bg-[#FAFAFA]">
@@ -24,7 +24,7 @@ const FeatureCard = ({ name, image }) => {
       {/* Meta — min-h keeps the "Customize It" pill aligned across a row
           even when a neighboring title wraps onto a second line. */}
       <div className="flex flex-1 flex-col items-start gap-4 p-6">
-        <h3 className="min-h-[28px] text-lg font-semibold leading-snug text-gray-900">
+        <h3 className="line-clamp-2 min-h-[56px] text-lg font-semibold leading-snug text-gray-900">
           {name}
         </h3>
 

@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="w-full border-t border-gray-100 bg-white">
       <div className="container-page section-py">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 md:grid-cols-4 lg:gap-x-16">
           {/* Brand */}
           <div>
             <span className="text-lg font-bold tracking-tight text-gray-900">

@@ -8,7 +8,7 @@ import { integrations } from "../data/integrations";
 const BrandSection = () => {
   return (
     <section className="w-full">
-      <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-8 lg:px-[84px] lg:py-14">
+      <div className="container-page section-py">
         <FeatureTitle
           eyebrow="Integrations"
           title="Works with the tools you already use"

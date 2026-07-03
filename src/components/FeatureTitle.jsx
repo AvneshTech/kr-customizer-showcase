@@ -12,7 +12,7 @@ const FeatureTitle = ({ eyebrow, title, subtitle, align = "left" }) => {
           {eyebrow}
         </span>
       )}
-      <h2 className="mt-2 text-[22px] font-semibold text-gray-900 sm:text-[26px]">
+      <h2 className="mt-2 text-[22px] font-bold text-gray-900 sm:text-[26px]">
         {title}
       </h2>
       {subtitle && (

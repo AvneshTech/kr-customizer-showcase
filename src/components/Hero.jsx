@@ -6,7 +6,7 @@ import heroCollage from "../assets/hero-collage.png";
 const Hero = () => {
   return (
     <section className="w-full">
-      <div className="container-page section-py grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
+      <div className="container-page grid min-h-[480px] grid-cols-1 items-center gap-10 py-16 lg:min-h-[600px] lg:grid-cols-2 lg:gap-12 lg:py-24">
         {/* Left: copy */}
         <div className="mx-auto w-full max-w-[560px] text-center lg:mx-0 lg:text-left">
           <h1 className="text-[32px] font-bold leading-[1.15] text-gray-900 sm:text-[40px] lg:text-[56px]">
