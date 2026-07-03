@@ -15,3 +15,15 @@ body{
   background:#F6F8F9;
   color:#111827;
 }
+
+/* Shared layout primitives so every section shares the exact same
+   container width/padding and the exact same vertical rhythm. */
+@layer utilities {
+  .container-page {
+    @apply mx-auto max-w-[1200px] px-5 sm:px-8;
+  }
+
+  .section-py {
+    @apply py-16 lg:py-24;
+  }
+}

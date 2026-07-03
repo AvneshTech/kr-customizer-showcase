@@ -23,7 +23,7 @@ const FeatureCard = ({ name, image }) => {
 
       {/* Meta — min-h keeps the "Customize It" pill aligned across a row
           even when a neighboring title wraps onto a second line. */}
-      <div className="flex flex-1 flex-col items-start gap-3 p-5">
+      <div className="flex flex-1 flex-col items-start gap-4 p-6">
         <h3 className="min-h-[28px] text-lg font-semibold leading-snug text-gray-900">
           {name}
         </h3>

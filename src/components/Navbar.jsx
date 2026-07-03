@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white">
-      <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-4 sm:px-8 lg:h-[88px] lg:px-[84px]">
+      <div className="container-page flex h-[72px] items-center justify-between">
         {/* Left: logo + desktop nav */}
         <div className="flex items-center gap-8 xl:gap-12">
           <a href="#" className="flex items-center gap-2.5">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </a>
 
           <nav className="hidden lg:block">
-            <ul className="flex items-center gap-6 xl:gap-8">
+            <ul className="flex items-center gap-8">
               <li>
                 <button className="flex items-center gap-1 text-sm font-medium text-[#3458C4]">
                   Showcase
@@ -54,7 +54,7 @@ const Navbar = () => {
           <button className="cursor-pointer text-sm font-medium text-gray-700 hover:text-black">
             Login
           </button>
-          <button className="flex h-[44px] w-[126px] items-center justify-center rounded-lg bg-[#3458C4] text-[16px] font-medium text-white transition-colors hover:bg-[#2C4BB0]">
+          <button className="flex h-[44px] w-[126px] items-center justify-center rounded-lg bg-[#3458C4] text-sm font-medium text-white transition-colors hover:bg-[#2C4BB0]">
             Get a demo
           </button>
         </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-gray-100 bg-white px-4 py-4 sm:px-8 lg:hidden">
+        <div className="container-page border-t border-gray-100 bg-white py-4 lg:hidden">
           <ul className="flex flex-col gap-1">
             <li>
               <a
