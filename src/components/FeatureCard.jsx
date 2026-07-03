@@ -1,21 +1,23 @@
 import Button from "./Button";
 
 // A single product card: image on top, name + "Customize It" pill below.
-// The image area is intentionally left blank (empty light box) until an
-// asset is provided through the `image` prop.
+// When `image` is empty the image area stays a clean light placeholder.
 
 const FeatureCard = ({ name, image }) => {
   return (
     <div className="flex flex-col">
-      {/* Image placeholder — add product image later */}
-      <div className="aspect-square w-full overflow-hidden rounded-xl border border-gray-200 bg-[#F0F4F5]">
+      {/* Product image */}
+      <div className="flex aspect-square w-full items-center justify-center overflow-hidden rounded-xl border border-gray-200 bg-white p-4">
         {image ? (
           <img
             src={image}
             alt={name}
-            className="h-full w-full object-contain p-6"
+            loading="lazy"
+            className="h-full w-full object-contain"
           />
-        ) : null}
+        ) : (
+          <div className="h-full w-full rounded-md bg-[#F0F4F5]" />
+        )}
       </div>
 
       {/* Meta */}

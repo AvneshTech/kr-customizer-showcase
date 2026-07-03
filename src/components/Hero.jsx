@@ -1,7 +1,7 @@
 import Button from "./Button";
+import heroCollage from "../assets/hero-collage.png";
 
-// Top hero: headline + copy + CTA on the left, product collage on the right.
-// The collage image is left blank (light box) until the asset is added.
+// Top hero: headline + copy + CTA on the left, product collage image on the right.
 
 const Hero = () => {
   return (
@@ -21,26 +21,13 @@ const Hero = () => {
           <Button className="mt-6 lg:mt-8">Request a Demo</Button>
         </div>
 
-        {/* Right: image collage placeholder */}
+        {/* Right: product collage */}
         <div className="w-full max-w-[560px]">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-[#ECF0F4] to-[#EEF1F8]">
-            {/* Floating editor toolbar */}
-            <div className="absolute left-1/2 top-4 flex -translate-x-1/2 items-center gap-3 rounded-lg bg-white/80 px-3 py-1.5 shadow-sm backdrop-blur">
-              <span className="h-3.5 w-3.5 rounded-sm border border-gray-300" />
-              <span className="h-3.5 w-3.5 rounded-full border border-gray-300" />
-              <span className="h-3.5 w-3.5 rounded-sm border border-gray-300" />
-              <span className="text-gray-400">···</span>
-            </div>
-
-            {/* Colored control dots */}
-            <div className="absolute left-6 top-1/2 flex -translate-y-1/2 flex-col gap-3">
-              <span className="h-3 w-3 rounded-full bg-[#F87171]" />
-              <span className="h-3 w-3 rounded-full bg-[#FBBF24]" />
-              <span className="h-3 w-3 rounded-full bg-[#3B82F6]" />
-            </div>
-
-            {/* Product image goes here later */}
-          </div>
+          <img
+            src={heroCollage}
+            alt="Customizable products collage — bucket hat, jersey, necklace and truck"
+            className="h-auto w-full"
+          />
         </div>
       </div>
     </section>
