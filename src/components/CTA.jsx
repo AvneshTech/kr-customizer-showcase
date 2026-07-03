@@ -6,7 +6,7 @@ const CTA = () => {
   return (
     <section className="w-full">
       <div className="mx-auto max-w-[1440px] px-[84px] py-16">
-        <div className="rounded-2xl border border-[#C7D0F5] bg-gradient-to-b from-[#F5F3FF] to-[#EEF1FF] px-8 py-12 text-center">
+        <div className="rounded-2xl border border-[#D0D8F0] bg-gradient-to-b from-[#FBFCFF] to-[#F2F5FC] px-8 py-12 text-center">
           <h2 className="text-[26px] font-semibold text-gray-900">
             Get started for free
           </h2>

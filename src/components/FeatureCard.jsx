@@ -8,7 +8,7 @@ const FeatureCard = ({ name, image }) => {
   return (
     <div className="flex flex-col">
       {/* Image placeholder — add product image later */}
-      <div className="aspect-square w-full overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+      <div className="aspect-square w-full overflow-hidden rounded-xl border border-gray-200 bg-[#F0F4F5]">
         {image ? (
           <img
             src={image}

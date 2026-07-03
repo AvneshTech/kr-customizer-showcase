@@ -23,7 +23,7 @@ const Hero = () => {
 
         {/* Right: image collage placeholder */}
         <div className="relative w-full max-w-[520px]">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-[#EEF1FF] to-[#F7F5FF]">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-[#ECF0F4] to-[#EEF1F8]">
             {/* Floating editor toolbar */}
             <div className="absolute left-1/2 top-4 flex -translate-x-1/2 items-center gap-3 rounded-lg bg-white/80 px-3 py-1.5 shadow-sm backdrop-blur">
               <span className="h-3.5 w-3.5 rounded-sm border border-gray-300" />

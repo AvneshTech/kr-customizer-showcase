@@ -7,9 +7,9 @@ const Button = ({ children, variant = "primary", className = "", ...props }) => 
 
   const variants = {
     primary:
-      "h-[44px] px-6 rounded-lg bg-[#3B5BDB] text-white text-[16px] hover:bg-[#3048C9]",
+      "h-[44px] px-6 rounded-lg bg-[#3458C4] text-white text-[16px] hover:bg-[#2C4BB0]",
     pill:
-      "px-4 py-1.5 rounded-full border border-[#3B5BDB] text-[#3B5BDB] text-xs hover:bg-[#3B5BDB] hover:text-white",
+      "px-4 py-1.5 rounded-full border border-[#3458C4] text-[#3458C4] text-xs hover:bg-[#3458C4] hover:text-white",
   };
 
   return (

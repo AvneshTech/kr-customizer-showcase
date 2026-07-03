@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="flex items-center gap-12">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-[#3B5BDB] text-sm font-bold text-white">
+            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-[#3458C4] text-sm font-bold text-white">
               kr
             </span>
             <span className="text-lg font-semibold text-gray-900">
@@ -45,7 +45,7 @@ const Navbar = () => {
             Login
           </button>
 
-          <button className="w-[126px] h-[44px] flex items-center justify-center rounded-lg bg-[#3B5BDB] text-white text-[16px] font-medium hover:bg-[#3048C9] transition-colors cursor-pointer">
+          <button className="w-[126px] h-[44px] flex items-center justify-center rounded-lg bg-[#3458C4] text-white text-[16px] font-medium hover:bg-[#2C4BB0] transition-colors cursor-pointer">
             Get a demo
           </button>
         </div>
