@@ -5,27 +5,33 @@ import Button from "./Button";
 
 const FeatureCard = ({ name, image }) => {
   return (
-    <div className="flex flex-col">
-      {/* Product image */}
-      <div className="flex aspect-square w-full items-center justify-center overflow-hidden rounded-xl border border-gray-200 bg-white p-4">
+    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md">
+      {/* Product image — light gray zone, image always centered on both
+          axes regardless of the source photo's own aspect ratio. */}
+      <div className="flex aspect-square w-full items-center justify-center border-b border-gray-100 bg-[#F0F4F5] p-8">
         {image ? (
           <img
             src={image}
             alt={name}
             loading="lazy"
-            className="h-full w-full object-contain"
+            className="mx-auto my-auto block max-h-full max-w-full object-contain"
           />
         ) : (
-          <div className="h-full w-full rounded-md bg-[#F0F4F5]" />
+          <div className="h-full w-full rounded-md bg-[#E4E9EC]" />
         )}
       </div>
 
-      {/* Meta */}
-      <h3 className="mt-3 text-[15px] font-medium text-gray-900">{name}</h3>
+      {/* Meta — min-h keeps the "Customize It" pill aligned across a row
+          even when a neighboring title wraps onto a second line. */}
+      <div className="flex flex-1 flex-col items-start gap-3 p-5">
+        <h3 className="min-h-[28px] text-lg font-semibold leading-snug text-gray-900">
+          {name}
+        </h3>
 
-      <Button variant="pill" className="mt-2 w-fit">
-        Customize It
-      </Button>
+        <Button variant="pill" className="mt-auto w-fit">
+          Customize It
+        </Button>
+      </div>
     </div>
   );
 };

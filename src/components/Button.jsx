@@ -9,7 +9,7 @@ const Button = ({ children, variant = "primary", className = "", ...props }) => 
     primary:
       "h-[44px] px-6 rounded-lg bg-[#3458C4] text-white text-[16px] hover:bg-[#2C4BB0]",
     pill:
-      "px-4 py-1.5 rounded-full border border-[#3458C4] text-[#3458C4] text-xs hover:bg-[#3458C4] hover:text-white",
+      "px-4 py-2 rounded-full border border-[#3458C4] text-[#3458C4] text-sm hover:bg-[#3458C4] hover:text-white",
   };
 
   return (

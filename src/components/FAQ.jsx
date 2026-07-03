@@ -14,13 +14,15 @@ const FAQ = () => {
 
   return (
     <section className="w-full">
-      <div className="mx-auto max-w-[820px] px-4 py-10 sm:px-8 lg:px-[84px] lg:py-14">
+      {/* Same outer max-width + padding as every other section, so this
+          block's left/right edges line up with the product grids above it. */}
+      <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-8 lg:px-[84px] lg:py-14">
         <SectionTitle
           title="Frequently Asked Questions"
           subtitle="Everything you need to know about the product and billing."
         />
 
-        <div className="mt-8 flex flex-col gap-3 lg:mt-10">
+        <div className="mx-auto mt-8 flex max-w-[820px] flex-col gap-3 lg:mt-10">
           {faqs.map((item, index) => {
             const isOpen = openIndex === index;
             return (

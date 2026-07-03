@@ -12,12 +12,18 @@ const Navbar = () => {
       <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-4 sm:px-8 lg:h-[88px] lg:px-[84px]">
         {/* Left: logo + desktop nav */}
         <div className="flex items-center gap-8 xl:gap-12">
-          <a href="#" className="flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-[#3458C4] text-sm font-bold text-white">
-              kr
+          <a href="#" className="flex items-center gap-2.5">
+            <span
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[15px] font-bold text-white shadow-sm"
+              style={{
+                background:
+                  "conic-gradient(from 200deg, #3B82F6 0% 28%, #EC4899 28% 58%, #111827 58% 88%, #F5F5F0 88% 100%)",
+              }}
+            >
+              K
             </span>
-            <span className="text-lg font-semibold text-gray-900">
-              customizer
+            <span className="text-lg font-semibold tracking-tight text-gray-900">
+              kr<span className="font-medium text-gray-700">customizer</span>
             </span>
           </a>
 
