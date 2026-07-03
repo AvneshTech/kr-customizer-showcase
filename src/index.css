@@ -16,14 +16,17 @@ body{
   color:#111827;
 }
 
-/* Shared layout primitives so every section shares the exact same
-   container width/padding and the exact same vertical rhythm. */
+/* ONE global layout container used by every section on the page
+   (Navbar, Hero, product sections, CTA, Footer) — nothing else in
+   the app should define its own max-width/side-padding. */
 @layer utilities {
   .container-page {
-    @apply mx-auto max-w-[1200px] px-5 sm:px-8;
+    @apply mx-auto w-full max-w-[1200px] px-8;
   }
 
+  /* 48px top + 48px bottom on every section = exactly 96px of
+     whitespace between any two adjacent sections' content. */
   .section-py {
-    @apply py-16 lg:py-24;
+    @apply py-12;
   }
 }
