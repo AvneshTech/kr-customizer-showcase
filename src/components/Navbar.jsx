@@ -94,7 +94,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="mt-4 flex flex-col gap-3">
+          <div className="mt-4 flex flex-col gap-4">
             <button className="w-full rounded-lg border border-gray-200 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
               Login
             </button>

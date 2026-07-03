@@ -24,9 +24,9 @@ body{
     @apply mx-auto w-full max-w-[1200px] px-8;
   }
 
-  /* 48px top + 48px bottom on every section = exactly 96px of
-     whitespace between any two adjacent sections' content. */
+  /* Every section gets exactly 96px of its own top padding and
+     96px of its own bottom padding, per spec. */
   .section-py {
-    @apply py-12;
+    @apply py-24;
   }
 }
