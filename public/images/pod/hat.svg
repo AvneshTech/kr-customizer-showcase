@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="hbg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F3F5FA"/><stop offset="1" stop-color="#E4E8F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#hbg)"/>
+  <ellipse cx="200" cy="235" rx="110" ry="26" fill="#6EA8E8"/>
+  <path d="M140 235 Q140 150 200 150 Q260 150 260 235 Z" fill="#8FC3F0"/>
+  <g fill="#5A98DD">
+    <circle cx="165" cy="200" r="6"/><circle cx="195" cy="185" r="6"/><circle cx="225" cy="200" r="6"/>
+    <circle cx="180" cy="220" r="6"/><circle cx="215" cy="220" r="6"/>
+  </g>
+</svg>

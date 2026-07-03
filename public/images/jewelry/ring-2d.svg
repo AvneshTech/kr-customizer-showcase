@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FDF0F0"/><stop offset="1" stop-color="#FADADA"/>
+    </linearGradient>
+    <linearGradient id="gold5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6D889"/><stop offset="1" stop-color="#C99A3E"/>
+    </linearGradient>
+    <linearGradient id="ruby" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F16A6A"/><stop offset="1" stop-color="#B71C3C"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg5)"/>
+  <circle cx="200" cy="245" r="68" fill="none" stroke="url(#gold5)" stroke-width="15"/>
+  <ellipse cx="200" cy="150" rx="34" ry="26" fill="url(#ruby)" stroke="#8C1230" stroke-width="3"/>
+</svg>

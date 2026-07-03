@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F3F5FA"/><stop offset="1" stop-color="#E4E8F1"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A3B7C"/><stop offset="1" stop-color="#131C42"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#tbg)"/>
+  <path d="M150 110 L120 140 L100 175 L135 195 L150 175 L150 300 Q200 312 250 300 L250 175 L265 195 L300 175 L280 140 L250 110 Q225 130 200 130 Q175 130 150 110Z" fill="url(#navy)"/>
+  <path d="M170 112 Q185 138 200 138 Q215 138 230 112" fill="none" stroke="#0E1530" stroke-width="4"/>
+</svg>

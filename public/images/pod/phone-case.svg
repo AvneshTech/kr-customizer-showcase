@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF1FE"/><stop offset="1" stop-color="#D3E3FB"/>
+    </linearGradient>
+    <linearGradient id="caseg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B8DEF"/><stop offset="1" stop-color="#2A4FB0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#pbg)"/>
+  <rect x="140" y="90" width="120" height="220" rx="26" fill="url(#caseg)" stroke="#1E3A8A" stroke-width="3"/>
+  <rect x="150" y="100" width="100" height="200" rx="18" fill="#1E3A8A" opacity="0.25"/>
+  <circle cx="225" cy="115" r="7" fill="#0F1E4D"/>
+  <rect x="185" y="285" width="30" height="6" rx="3" fill="#0F1E4D"/>
+</svg>

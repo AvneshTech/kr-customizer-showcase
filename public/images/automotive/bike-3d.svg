@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="abg1" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#1F2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#abg1)"/>
+  <g stroke="#D1D5DB" stroke-width="8" fill="none">
+    <circle cx="130" cy="270" r="42"/>
+    <circle cx="290" cy="270" r="42"/>
+  </g>
+  <g stroke="#9CA3AF" stroke-width="6" fill="none">
+    <path d="M130 270 L200 210 L245 210"/>
+    <path d="M200 210 L175 160 L215 150"/>
+    <path d="M245 210 L290 270"/>
+    <path d="M175 160 L145 175"/>
+  </g>
+  <rect x="205" y="140" width="35" height="14" rx="4" fill="#6B7280"/>
+  <rect x="120" y="255" width="24" height="10" rx="3" fill="#374151"/>
+</svg>

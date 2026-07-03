@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAF1FE"/><stop offset="1" stop-color="#D3E3FB"/>
+    </linearGradient>
+    <linearGradient id="silver6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3F5F8"/><stop offset="1" stop-color="#B9C3D0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg6)"/>
+  <path d="M100 100 Q200 260 300 100" fill="none" stroke="url(#silver6)" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#F3F5F8" stroke="#B9C3D0" stroke-width="1.5">
+    <circle cx="130" cy="140" r="6"/><circle cx="155" cy="180" r="6"/><circle cx="185" cy="212" r="6"/>
+    <circle cx="215" cy="212" r="6"/><circle cx="245" cy="180" r="6"/><circle cx="270" cy="140" r="6"/>
+  </g>
+  <polygon points="200,225 235,265 215,305 185,305 165,265" fill="url(#silver6)" stroke="#8996A8" stroke-width="2"/>
+  <polygon points="185,305 215,305 200,325" fill="#DCE3EC" stroke="#8996A8" stroke-width="1.5"/>
+</svg>

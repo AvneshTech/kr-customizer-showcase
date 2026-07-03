@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="tobg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EAFBF3"/><stop offset="1" stop-color="#CDF3E1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#tobg)"/>
+  <path d="M160 150 Q160 105 200 105 Q240 105 240 150" fill="none" stroke="#0F9D6B" stroke-width="10"/>
+  <rect x="120" y="150" width="160" height="150" rx="10" fill="#10B981"/>
+  <rect x="120" y="150" width="160" height="30" fill="#0F9D6B"/>
+</svg>
