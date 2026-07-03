@@ -5,9 +5,9 @@ import Button from "./Button";
 const CTA = () => {
   return (
     <section className="w-full">
-      <div className="mx-auto max-w-[1440px] px-[84px] py-16">
-        <div className="rounded-2xl border border-[#D0D8F0] bg-gradient-to-b from-[#FBFCFF] to-[#F2F5FC] px-8 py-12 text-center">
-          <h2 className="text-[26px] font-semibold text-gray-900">
+      <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-8 lg:px-[84px] lg:py-16">
+        <div className="rounded-2xl border border-[#D0D8F0] bg-gradient-to-b from-[#FBFCFF] to-[#F2F5FC] px-6 py-10 text-center sm:px-8 sm:py-12">
+          <h2 className="text-[22px] font-semibold text-gray-900 sm:text-[26px]">
             Get started for free
           </h2>
 

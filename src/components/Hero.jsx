@@ -1,28 +1,28 @@
 import Button from "./Button";
 
 // Top hero: headline + copy + CTA on the left, product collage on the right.
-// The collage image is left blank (light lavender box) until the asset is added.
+// The collage image is left blank (light box) until the asset is added.
 
 const Hero = () => {
   return (
     <section className="w-full">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-12 px-[84px] py-16 lg:flex-row lg:justify-between">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-10 px-4 py-12 sm:px-8 lg:flex-row lg:justify-between lg:gap-12 lg:px-[84px] lg:py-16">
         {/* Left: copy */}
-        <div className="max-w-[520px]">
-          <h1 className="text-[40px] font-bold leading-[1.15] text-gray-900">
+        <div className="w-full max-w-[560px] text-center lg:text-left">
+          <h1 className="text-[28px] font-bold leading-[1.2] text-gray-900 sm:text-4xl lg:text-[40px] lg:leading-[1.15]">
             Explore Your Style From Fashion to Functional Gear
           </h1>
 
-          <p className="mt-5 text-[15px] leading-relaxed text-gray-500">
+          <p className="mt-4 text-[15px] leading-relaxed text-gray-500 lg:mt-5">
             Browse the best in Apparel, Accessories, Automotive Essentials,
             Jewelry &amp; Outdoor/Tactical Gear — All in One Place.
           </p>
 
-          <Button className="mt-8">Request a Demo</Button>
+          <Button className="mt-6 lg:mt-8">Request a Demo</Button>
         </div>
 
         {/* Right: image collage placeholder */}
-        <div className="relative w-full max-w-[520px]">
+        <div className="w-full max-w-[560px]">
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-gradient-to-br from-[#ECF0F4] to-[#EEF1F8]">
             {/* Floating editor toolbar */}
             <div className="absolute left-1/2 top-4 flex -translate-x-1/2 items-center gap-3 rounded-lg bg-white/80 px-3 py-1.5 shadow-sm backdrop-blur">

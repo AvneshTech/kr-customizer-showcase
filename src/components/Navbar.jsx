@@ -1,12 +1,17 @@
+import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
+import { FiChevronDown } from "react-icons/fi";
+
 const navLinks = ["About Us", "Case Studies", "Blog", "Contact"];
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="w-full h-[88px] bg-white border-b border-gray-100">
-      <div className="max-w-[1440px] h-full mx-auto px-[84px] py-[18px] flex items-center justify-between">
-        {/* Left */}
-        <div className="flex items-center gap-12">
-          {/* Logo */}
+    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white">
+      <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-4 sm:px-8 lg:h-[88px] lg:px-[84px]">
+        {/* Left: logo + desktop nav */}
+        <div className="flex items-center gap-8 xl:gap-12">
           <a href="#" className="flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center rounded-md bg-[#3458C4] text-sm font-bold text-white">
               kr
@@ -16,20 +21,19 @@ const Navbar = () => {
             </span>
           </a>
 
-          {/* Navigation */}
-          <nav>
-            <ul className="flex items-center gap-8">
+          <nav className="hidden lg:block">
+            <ul className="flex items-center gap-6 xl:gap-8">
               <li>
-                <select className="text-[#3B82F6] text-sm font-medium bg-transparent outline-none cursor-pointer">
-                  <option>Showcase</option>
-                </select>
+                <button className="flex items-center gap-1 text-sm font-medium text-[#3458C4]">
+                  Showcase
+                  <FiChevronDown className="mt-0.5" />
+                </button>
               </li>
-
               {navLinks.map((link) => (
                 <li key={link}>
                   <a
                     href="#"
-                    className="text-[#374151] text-sm font-medium hover:text-blue-600"
+                    className="text-sm font-medium text-[#374151] hover:text-blue-600"
                   >
                     {link}
                   </a>
@@ -39,17 +43,61 @@ const Navbar = () => {
           </nav>
         </div>
 
-        {/* Right */}
-        <div className="flex items-center gap-6">
-          <button className="text-sm font-medium text-gray-700 hover:text-black cursor-pointer">
+        {/* Right: desktop actions */}
+        <div className="hidden items-center gap-6 lg:flex">
+          <button className="cursor-pointer text-sm font-medium text-gray-700 hover:text-black">
             Login
           </button>
-
-          <button className="w-[126px] h-[44px] flex items-center justify-center rounded-lg bg-[#3458C4] text-white text-[16px] font-medium hover:bg-[#2C4BB0] transition-colors cursor-pointer">
+          <button className="flex h-[44px] w-[126px] items-center justify-center rounded-lg bg-[#3458C4] text-[16px] font-medium text-white transition-colors hover:bg-[#2C4BB0]">
             Get a demo
           </button>
         </div>
+
+        {/* Mobile toggle */}
+        <button
+          type="button"
+          aria-label="Toggle menu"
+          onClick={() => setOpen((v) => !v)}
+          className="flex h-10 w-10 items-center justify-center rounded-md text-gray-800 hover:bg-gray-100 lg:hidden"
+        >
+          {open ? <HiX size={24} /> : <HiMenu size={24} />}
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="border-t border-gray-100 bg-white px-4 py-4 sm:px-8 lg:hidden">
+          <ul className="flex flex-col gap-1">
+            <li>
+              <a
+                href="#"
+                className="block rounded-md px-2 py-2 text-sm font-medium text-[#3458C4] hover:bg-gray-50"
+              >
+                Showcase
+              </a>
+            </li>
+            {navLinks.map((link) => (
+              <li key={link}>
+                <a
+                  href="#"
+                  className="block rounded-md px-2 py-2 text-sm font-medium text-[#374151] hover:bg-gray-50"
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-4 flex flex-col gap-3">
+            <button className="w-full rounded-lg border border-gray-200 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
+              Login
+            </button>
+            <button className="w-full rounded-lg bg-[#3458C4] py-2.5 text-sm font-medium text-white hover:bg-[#2C4BB0]">
+              Get a demo
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
