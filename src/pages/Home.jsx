@@ -14,15 +14,18 @@ const Home = () => {
 
       {/* Product category sections */}
       <main>
-        {categories.map((category) => (
-          <section key={category.id} className="w-full">
-            <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-8 lg:px-[84px] lg:py-14">
+        {categories.map((category, catIndex) => (
+          <section
+            key={category.id}
+            className={`w-full ${catIndex > 0 ? "border-t border-gray-100" : ""}`}
+          >
+            <div className="mx-auto max-w-[1440px] px-4 py-14 sm:px-8 lg:px-[84px] lg:py-20">
               <SectionTitle
                 title={category.title}
                 subtitle={category.subtitle}
               />
 
-              <div className="mt-8 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 sm:gap-8 lg:mt-10 lg:grid-cols-3">
+              <div className="mt-10 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 sm:gap-8 lg:mt-12 lg:grid-cols-3">
                 {category.items.map((item, index) => (
                   <FeatureCard
                     key={`${category.id}-${index}`}

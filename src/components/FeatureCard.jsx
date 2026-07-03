@@ -8,7 +8,7 @@ const FeatureCard = ({ name, image }) => {
     <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow hover:shadow-md">
       {/* Product image — light gray zone, image always centered on both
           axes regardless of the source photo's own aspect ratio. */}
-      <div className="flex aspect-square w-full items-center justify-center border-b border-gray-100 bg-[#F0F4F5] p-8">
+      <div className="flex aspect-square w-full items-center justify-center border-b border-gray-100 bg-[#F0F4F5] p-4">
         {image ? (
           <img
             src={image}
