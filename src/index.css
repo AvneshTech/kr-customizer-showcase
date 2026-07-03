@@ -21,13 +21,12 @@ body{
    the app should define its own max-width/side-padding. */
 @layer utilities {
   .container-page {
-    @apply mx-auto w-full max-w-[1200px] px-8;
+    @apply mx-auto w-full max-w-[1200px] px-6 lg:px-8;
   }
 
-  /* 40px top + 40px bottom on every section = ~80px of whitespace
-     between any two adjacent sections' content, applied uniformly
-     so the whole page keeps one consistent vertical rhythm. */
+  /* 80px top + 80px bottom on every section, applied uniformly so the
+     whole page keeps one consistent vertical rhythm between sections. */
   .section-py {
-    @apply py-10;
+    @apply py-20;
   }
 }

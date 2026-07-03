@@ -7,14 +7,16 @@ const CTA = () => {
     <section className="w-full">
       <div className="container-page section-py">
         <div className="rounded-2xl border border-[#D0D8F0] bg-gradient-to-b from-[#FBFCFF] to-[#F2F5FC] px-6 py-12 text-center sm:px-12 sm:py-16">
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-[36px]">
-            Get started for free
-          </h2>
+          <div className="mx-auto max-w-3xl space-y-4 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl lg:text-[36px]">
+              Get started for free
+            </h2>
 
-          <p className="mx-auto mt-4 max-w-[520px] text-base text-gray-500">
-            Play around with Customizer and set up your docs for free. Add your
-            team and pay when you&rsquo;re ready.
-          </p>
+            <p className="text-base text-gray-500">
+              Play around with Customizer and set up your docs for free. Add
+              your team and pay when you&rsquo;re ready.
+            </p>
+          </div>
 
           <Button className="mt-8">Request a Demo</Button>
         </div>

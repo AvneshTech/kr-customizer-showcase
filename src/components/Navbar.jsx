@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FiChevronDown } from "react-icons/fi";
+import Button from "./Button";
 
 const navLinks = ["About Us", "Case Studies", "Blog", "Contact"];
 
@@ -54,9 +55,7 @@ const Navbar = () => {
           <button className="cursor-pointer text-sm font-medium text-gray-700 hover:text-black">
             Login
           </button>
-          <button className="flex h-[44px] w-[126px] items-center justify-center rounded-lg bg-[#3458C4] text-sm font-medium text-white transition-colors hover:bg-[#2C4BB0]">
-            Get a demo
-          </button>
+          <Button>Get a demo</Button>
         </div>
 
         {/* Mobile toggle */}
@@ -98,9 +97,7 @@ const Navbar = () => {
             <button className="w-full rounded-lg border border-gray-200 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
               Login
             </button>
-            <button className="w-full rounded-lg bg-[#3458C4] py-2.5 text-sm font-medium text-white hover:bg-[#2C4BB0]">
-              Get a demo
-            </button>
+            <Button className="w-full">Get a demo</Button>
           </div>
         </div>
       )}

@@ -1,14 +1,16 @@
 import ProductCard from "./ProductCard";
+import SectionTitle from "./SectionTitle";
+
+// NOTE: not currently used by any page — Home.jsx builds category sections
+// inline with SectionTitle + FeatureCard instead. Kept in sync with that
+// same container-page / section-py layout system in case this gets wired in.
 
 const ProductSection = ({ title, subtitle, items }) => {
   return (
-    <section className="max-w-[1100px] mx-auto px-6 py-16">
-      <div className="text-center max-w-2xl mx-auto mb-10">
-        <h2 className="text-3xl font-bold text-gray-900 mb-3">{title}</h2>
-        <p className="text-gray-500 text-[15px] leading-relaxed">{subtitle}</p>
-      </div>
+    <section className="container-page section-py">
+      <SectionTitle title={title} subtitle={subtitle} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-12 grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item, idx) => (
           <ProductCard key={`${item.name}-${idx}`} name={item.name} image={item.image} />
         ))}

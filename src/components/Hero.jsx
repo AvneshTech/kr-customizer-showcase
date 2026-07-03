@@ -26,7 +26,7 @@ const Hero = () => {
           <img
             src={heroCollage}
             alt="Customizable products collage — bucket hat, jersey, necklace and truck"
-            className="h-auto w-full max-w-[520px]"
+            className="h-auto w-full max-w-[560px]"
           />
         </div>
       </div>
