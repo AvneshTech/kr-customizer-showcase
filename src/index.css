@@ -1,32 +1,44 @@
 @import "tailwindcss";
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+@theme {
+  --color-kr-lavender: #fcf8ff;
+  --color-kr-navy: #1a1640;
+  --color-kr-navy-light: #2c275a;
+  --color-kr-yellow: #ffd600;
+  --color-kr-yellow-hover: #e6c200;
+  --color-kr-text: #33305c;
+  --color-kr-muted: #64748b;
+  --color-kr-gray: #f8f9fa;
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
 }
 
-html{
-  scroll-behavior:smooth;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
-body{
-  font-family: "Inter", sans-serif;
-  background:#F6F8F9;
-  color:#111827;
-}
-
-/* ONE global layout container used by every section on the page
-   (Navbar, Hero, product sections, CTA, Footer) — nothing else in
-   the app should define its own max-width/side-padding. */
-@layer utilities {
-  .container-page {
-    @apply mx-auto w-full max-w-[1200px] px-6 lg:px-8;
+@layer base {
+  body {
+    @apply bg-white text-kr-text antialiased selection:bg-kr-yellow selection:text-kr-navy font-sans;
   }
+}
 
-  /* 80px top + 80px bottom on every section, applied uniformly so the
-     whole page keeps one consistent vertical rhythm between sections. */
-  .section-py {
-    @apply py-20;
-  }
+/* KR Customizer Light Mode Utilities */
+.kr-card {
+  @apply bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100 hover:shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-all duration-300;
+}
+
+.kr-btn-primary {
+  @apply px-7 py-3.5 rounded-xl bg-[#ffd600] hover:bg-[#e6c200] text-[#1a1640] font-bold text-sm tracking-wide uppercase transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 inline-flex items-center justify-center;
+}
+
+.kr-btn-secondary {
+  @apply px-7 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#1a1640] font-bold text-sm tracking-wide uppercase border-2 border-[#ffd600] transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5 active:translate-y-0 inline-flex items-center justify-center;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }

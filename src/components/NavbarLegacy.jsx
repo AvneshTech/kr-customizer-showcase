@@ -1,0 +1,132 @@
+import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
+import { FiChevronDown } from "react-icons/fi";
+import Button from "./Button";
+
+const navLinks = ["About Us", "Case Studies", "Blog", "Contact"];
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const scrollToDemo = () => {
+    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
+
+  const handleLogin = () => {
+    alert("Login is coming soon! For access in the meantime, contact support@kds.com.");
+    setOpen(false);
+  };
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white">
+      <div className="container-page flex h-[72px] items-center justify-between">
+        {/* Left: logo + desktop nav */}
+        <div className="flex items-center gap-8 xl:gap-12">
+          <a href="#" className="flex items-center gap-2.5">
+            <span
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[15px] font-bold text-white shadow-sm"
+              style={{
+                background:
+                  "conic-gradient(from 200deg, #3B82F6 0% 28%, #EC4899 28% 58%, #111827 58% 88%, #F5F5F0 88% 100%)",
+              }}
+            >
+              K
+            </span>
+            <span className="text-lg font-semibold tracking-tight text-gray-900">
+              kr<span className="font-medium text-gray-700">customizer</span>
+            </span>
+          </a>
+
+          <nav className="hidden lg:block">
+            <ul className="flex items-center gap-8">
+              <li>
+                <a
+                  href="#showcase"
+                  className="relative flex items-center gap-1 pb-1 text-sm font-medium text-[#3458C4] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#3458C4] after:content-['']"
+                >
+                  Showcase
+                  <FiChevronDown className="mt-0.5" />
+                </a>
+              </li>
+              {navLinks.map((link) => (
+                <li key={link}>
+                  <a
+                    href="#"
+                    className="relative pb-1 text-sm font-medium text-[#374151] transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-blue-600 after:transition-all after:duration-200 hover:text-blue-600 hover:after:w-full"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+
+        {/* Right: desktop actions */}
+        <div className="hidden items-center gap-6 lg:flex">
+          <button
+            type="button"
+            onClick={handleLogin}
+            className="cursor-pointer text-sm font-medium text-gray-700 transition-colors duration-200 hover:text-black"
+          >
+            Login
+          </button>
+          <Button onClick={scrollToDemo}>Get a demo</Button>
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          type="button"
+          aria-label="Toggle menu"
+          onClick={() => setOpen((v) => !v)}
+          className="flex h-10 w-10 items-center justify-center rounded-md text-gray-800 hover:bg-gray-100 lg:hidden"
+        >
+          {open ? <HiX size={24} /> : <HiMenu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="container-page border-t border-gray-100 bg-white py-4 lg:hidden">
+          <ul className="flex flex-col gap-1">
+            <li>
+              <a
+                href="#showcase"
+                onClick={() => setOpen(false)}
+                className="block rounded-md px-2 py-2 text-sm font-medium text-[#3458C4] hover:bg-gray-50"
+              >
+                Showcase
+              </a>
+            </li>
+            {navLinks.map((link) => (
+              <li key={link}>
+                <a
+                  href="#"
+                  className="block rounded-md px-2 py-2 text-sm font-medium text-[#374151] hover:bg-gray-50"
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-4 flex flex-col gap-4">
+            <button
+              type="button"
+              onClick={handleLogin}
+              className="w-full rounded-lg border border-gray-200 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              Login
+            </button>
+            <Button className="w-full" onClick={scrollToDemo}>
+              Get a demo
+            </Button>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Navbar;

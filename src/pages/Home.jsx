@@ -1,45 +1,48 @@
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import SectionTitle from "../components/SectionTitle";
-import FeatureCard from "../components/FeatureCard";
+import HeroSection from "../components/HeroSection";
+import HeroConfigurator from "../components/HeroConfigurator";
+import TopFeatures from "../components/TopFeatures";
+import FeaturesGrid from "../components/FeaturesGrid";
+import ResultsSection from "../components/ResultsSection";
+import WhyDifferent from "../components/WhyDifferent";
+import HowItWorks from "../components/HowItWorks";
+import ProductCatalog from "../components/ProductCatalog";
+import CategoriesGrid from "../components/CategoriesGrid";
+import Integrations from "../components/Integrations";
+import RoiCalculator from "../components/RoiCalculator";
+import PricingTiers from "../components/PricingTiers";
+import Testimonials from "../components/Testimonials";
+import FaqSection from "../components/FaqSection";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
-import { categories } from "../data/features";
 
+// Full merged KR Customizer site: every section from Frontend_KDS-main
+// plus this project's own real product catalog, combined into one
+// coherent one-page flow (light marketing bands alternating with the
+// dark interactive/product sections).
 const Home = () => {
   return (
     <>
       <Navbar />
-      <Hero />
 
-      {/* Product category sections */}
-      <main id="showcase">
-        {categories.map((category, catIndex) => (
-          <section
-            key={category.id}
-            className={`w-full ${catIndex > 0 ? "border-t border-gray-100" : ""}`}
-          >
-            <div className="container-page section-py">
-              <SectionTitle
-                title={category.title}
-                subtitle={category.subtitle}
-              />
-
-              <div className="mt-12 grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {category.items.map((item, index) => (
-                  <FeatureCard
-                    key={`${category.id}-${index}`}
-                    name={item.name}
-                    image={item.image}
-                  />
-                ))}
-              </div>
-            </div>
-          </section>
-        ))}
+      <main>
+        <HeroSection />
+        <HeroConfigurator />
+        <TopFeatures />
+        <FeaturesGrid />
+        <ResultsSection />
+        <WhyDifferent />
+        <HowItWorks />
+        <ProductCatalog />
+        <CategoriesGrid />
+        <Integrations />
+        <RoiCalculator />
+        <PricingTiers />
+        <Testimonials />
+        <FaqSection />
+        <CTA />
       </main>
 
-      <CTA />
       <Footer />
     </>
   );

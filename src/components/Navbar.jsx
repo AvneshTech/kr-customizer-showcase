@@ -1,132 +1,102 @@
-import { useState } from "react";
-import { HiMenu, HiX } from "react-icons/hi";
-import { FiChevronDown } from "react-icons/fi";
-import Button from "./Button";
+import React, { useState } from 'react';
+import { Menu, X, Sparkles, ChevronRight } from 'lucide-react';
 
-const navLinks = ["About Us", "Case Studies", "Blog", "Contact"];
+export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
-  const scrollToDemo = () => {
-    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
-  };
-
-  const handleLogin = () => {
-    alert("Login is coming soon! For access in the meantime, contact support@kds.com.");
-    setOpen(false);
-  };
+  const navLinks = [
+    { name: 'Features', href: '#features' },
+    { name: 'Why KR', href: '#why-different' },
+    { name: 'Categories', href: '#categories' },
+    { name: 'Results', href: '#results' },
+    { name: 'FAQs', href: '#faqs' },
+  ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white">
-      <div className="container-page flex h-[72px] items-center justify-between">
-        {/* Left: logo + desktop nav */}
-        <div className="flex items-center gap-8 xl:gap-12">
-          <a href="#" className="flex items-center gap-2.5">
-            <span
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[15px] font-bold text-white shadow-sm"
-              style={{
-                background:
-                  "conic-gradient(from 200deg, #3B82F6 0% 28%, #EC4899 28% 58%, #111827 58% 88%, #F5F5F0 88% 100%)",
-              }}
-            >
-              K
-            </span>
-            <span className="text-lg font-semibold tracking-tight text-gray-900">
-              kr<span className="font-medium text-gray-700">customizer</span>
-            </span>
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-xs transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          
+          {/* Brand Logo matching Screenshot 1 */}
+          <a href="#" className="flex items-center gap-2.5 group">
+            {/* Colorful K Hexagon Icon */}
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#1a1640] via-[#4f46e5] to-[#06b6d4] p-0.5 shadow-md flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+              <div className="w-full h-full bg-[#1a1640] rounded-[10px] flex items-center justify-center">
+                <span className="text-white font-black text-lg tracking-tighter">K</span>
+              </div>
+            </div>
+            <div className="flex items-baseline">
+              <span className="text-2xl font-black text-[#1a1640] tracking-tight lowercase">
+                kr
+              </span>
+              <span className="text-xl font-normal text-[#33305c] tracking-tight lowercase ml-1">
+                customizer
+              </span>
+            </div>
           </a>
 
-          <nav className="hidden lg:block">
-            <ul className="flex items-center gap-8">
-              <li>
-                <a
-                  href="#showcase"
-                  className="relative flex items-center gap-1 pb-1 text-sm font-medium text-[#3458C4] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#3458C4] after:content-['']"
-                >
-                  Showcase
-                  <FiChevronDown className="mt-0.5" />
-                </a>
-              </li>
-              {navLinks.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
-                    className="relative pb-1 text-sm font-medium text-[#374151] transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-blue-600 after:transition-all after:duration-200 hover:text-blue-600 hover:after:w-full"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {/* Desktop Navigation Links */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-semibold text-[#33305c] hover:text-[#4f46e5] transition-colors duration-200"
+              >
+                {link.name}
+              </a>
+            ))}
           </nav>
-        </div>
 
-        {/* Right: desktop actions */}
-        <div className="hidden items-center gap-6 lg:flex">
-          <button
-            type="button"
-            onClick={handleLogin}
-            className="cursor-pointer text-sm font-medium text-gray-700 transition-colors duration-200 hover:text-black"
-          >
-            Login
-          </button>
-          <Button onClick={scrollToDemo}>Get a demo</Button>
-        </div>
+          {/* Desktop CTA Button */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href="#hero"
+              className="kr-btn-primary py-2.5 px-6 text-xs shadow-sm hover:shadow-md"
+            >
+              GET STARTED FREE
+            </a>
+          </div>
 
-        {/* Mobile toggle */}
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-md text-gray-800 hover:bg-gray-100 lg:hidden"
-        >
-          {open ? <HiX size={24} /> : <HiMenu size={24} />}
-        </button>
+          {/* Mobile Menu Button */}
+          <div className="flex md:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-lg bg-slate-50 text-[#1a1640] hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#ffd600]"
+              aria-label="Toggle Menu"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
       </div>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="container-page border-t border-gray-100 bg-white py-4 lg:hidden">
-          <ul className="flex flex-col gap-1">
-            <li>
-              <a
-                href="#showcase"
-                onClick={() => setOpen(false)}
-                className="block rounded-md px-2 py-2 text-sm font-medium text-[#3458C4] hover:bg-gray-50"
-              >
-                Showcase
-              </a>
-            </li>
+      {/* Mobile Dropdown Drawer */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-b border-slate-100 bg-white/98 backdrop-blur-2xl animate-in slide-in-from-top duration-300 shadow-lg">
+          <div className="px-4 pt-4 pb-6 space-y-3">
             {navLinks.map((link) => (
-              <li key={link}>
-                <a
-                  href="#"
-                  className="block rounded-md px-2 py-2 text-sm font-medium text-[#374151] hover:bg-gray-50"
-                >
-                  {link}
-                </a>
-              </li>
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-3 py-2.5 rounded-xl text-base font-semibold text-[#33305c] hover:text-[#1a1640] hover:bg-slate-50 transition-colors"
+              >
+                {link.name}
+              </a>
             ))}
-          </ul>
-
-          <div className="mt-4 flex flex-col gap-4">
-            <button
-              type="button"
-              onClick={handleLogin}
-              className="w-full rounded-lg border border-gray-200 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
-            >
-              Login
-            </button>
-            <Button className="w-full" onClick={scrollToDemo}>
-              Get a demo
-            </Button>
+            <div className="pt-4 border-t border-slate-100">
+              <a
+                href="#hero"
+                onClick={() => setMobileMenuOpen(false)}
+                className="kr-btn-primary w-full text-center justify-center py-3.5"
+              >
+                GET STARTED FREE
+              </a>
+            </div>
           </div>
         </div>
       )}
     </header>
   );
-};
-
-export default Navbar;
+}
