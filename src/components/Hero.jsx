@@ -4,6 +4,10 @@ import heroCollage from "../assets/hero-collage.png";
 // Top hero: headline + copy + CTA on the left, product collage image on the right.
 
 const Hero = () => {
+  const scrollToDemo = () => {
+    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="w-full">
       <div className="container-page grid min-h-[480px] grid-cols-1 items-center gap-10 py-16 lg:min-h-[600px] lg:grid-cols-2 lg:gap-12 lg:py-24">
@@ -18,7 +22,9 @@ const Hero = () => {
             Jewelry &amp; Outdoor/Tactical Gear — All in One Place.
           </p>
 
-          <Button className="mt-8">Request a Demo</Button>
+          <Button className="mt-8" onClick={scrollToDemo}>
+            Request a Demo
+          </Button>
         </div>
 
         {/* Right: product collage */}

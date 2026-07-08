@@ -13,7 +13,7 @@ const Home = () => {
       <Hero />
 
       {/* Product category sections */}
-      <main>
+      <main id="showcase">
         {categories.map((category, catIndex) => (
           <section
             key={category.id}

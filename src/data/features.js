@@ -30,11 +30,11 @@ export const categories = [
     id: "weapons",
     title: "Weapons Product",
     subtitle:
-      "To keep your menu fresh, just add new cake designs, seasonal treats, or distinctive packaging to your custom bakery products.",
+      "Showcase tactical and gear-style products with realistic 3D previews customers can rotate, inspect and customize before checkout.",
     items: [
-      { name: "M416 3D", image: "/products/m416-1.jpg" },
-      { name: "M416 3D", image: "/products/m416-2.jpg" },
-      { name: "M416 3D", image: "/products/m416-3.jpg" },
+      { name: "M416 3D — Desert Camo", image: "/products/m416-1.jpg" },
+      { name: "M416 3D — Woodland Camo", image: "/products/m416-2.jpg" },
+      { name: "M416 3D — Urban Camo", image: "/products/m416-3.jpg" },
     ],
   },
   {
@@ -47,15 +47,15 @@ export const categories = [
       { name: "Tote Bag", image: "/products/tote-bag.jpg" },
       { name: "Bottle", image: "/products/bottle.jpg" },
       { name: "Hat", image: "/products/hat.jpg" },
-      { name: "Pillow", image: "/products/pillow-1.jpg" },
-      { name: "Pillow", image: "/products/pillow-2.jpg" },
+      { name: "Square Pillow", image: "/products/pillow-1.jpg" },
+      { name: "Lumbar Pillow", image: "/products/pillow-2.jpg" },
     ],
   },
   {
     id: "automotive",
     title: "Automotive",
     subtitle:
-      "To keep your menu fresh, just add new cake designs, seasonal treats, or distinctive packaging to your custom bakery products.",
+      "Let customers configure bikes, cars and trucks with real-time color, decal and accessory changes before they buy.",
     items: [
       { name: "Bike 3D", image: "/products/bike-3d.jpg" },
       { name: "Car 3D", image: "/products/car-3d.jpg" },

@@ -8,6 +8,16 @@ const navLinks = ["About Us", "Case Studies", "Blog", "Contact"];
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  const scrollToDemo = () => {
+    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
+
+  const handleLogin = () => {
+    alert("Login is coming soon! For access in the meantime, contact support@kds.com.");
+    setOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white">
       <div className="container-page flex h-[72px] items-center justify-between">
@@ -31,10 +41,13 @@ const Navbar = () => {
           <nav className="hidden lg:block">
             <ul className="flex items-center gap-8">
               <li>
-                <button className="relative flex items-center gap-1 pb-1 text-sm font-medium text-[#3458C4] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#3458C4] after:content-['']">
+                <a
+                  href="#showcase"
+                  className="relative flex items-center gap-1 pb-1 text-sm font-medium text-[#3458C4] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#3458C4] after:content-['']"
+                >
                   Showcase
                   <FiChevronDown className="mt-0.5" />
-                </button>
+                </a>
               </li>
               {navLinks.map((link) => (
                 <li key={link}>
@@ -52,10 +65,14 @@ const Navbar = () => {
 
         {/* Right: desktop actions */}
         <div className="hidden items-center gap-6 lg:flex">
-          <button className="cursor-pointer text-sm font-medium text-gray-700 transition-colors duration-200 hover:text-black">
+          <button
+            type="button"
+            onClick={handleLogin}
+            className="cursor-pointer text-sm font-medium text-gray-700 transition-colors duration-200 hover:text-black"
+          >
             Login
           </button>
-          <Button>Get a demo</Button>
+          <Button onClick={scrollToDemo}>Get a demo</Button>
         </div>
 
         {/* Mobile toggle */}
@@ -75,7 +92,8 @@ const Navbar = () => {
           <ul className="flex flex-col gap-1">
             <li>
               <a
-                href="#"
+                href="#showcase"
+                onClick={() => setOpen(false)}
                 className="block rounded-md px-2 py-2 text-sm font-medium text-[#3458C4] hover:bg-gray-50"
               >
                 Showcase
@@ -94,10 +112,16 @@ const Navbar = () => {
           </ul>
 
           <div className="mt-4 flex flex-col gap-4">
-            <button className="w-full rounded-lg border border-gray-200 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50">
+            <button
+              type="button"
+              onClick={handleLogin}
+              className="w-full rounded-lg border border-gray-200 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
               Login
             </button>
-            <Button className="w-full">Get a demo</Button>
+            <Button className="w-full" onClick={scrollToDemo}>
+              Get a demo
+            </Button>
           </div>
         </div>
       )}
