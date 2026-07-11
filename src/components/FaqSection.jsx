@@ -27,7 +27,7 @@ export default function FaqSection() {
               <div
                 key={idx}
                 className={`rounded-2xl border transition-all overflow-hidden ${
-                  isOpen ? 'bg-slate-50/80 border-slate-300 shadow-sm' : 'bg-white border-slate-200 hover:border-slate-300'
+                  isOpen ? 'bg-slate-50/80 border-slate-250 shadow-sm' : 'bg-white border-slate-200 hover:border-slate-300'
                 }`}
               >
                 <button
