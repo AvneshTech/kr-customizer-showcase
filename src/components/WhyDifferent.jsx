@@ -64,7 +64,7 @@ export default function WhyDifferent() {
 
         </div>
 
-      </div>
-    </section>
+      {/* </div>
+    </section> */}
   );
 }
